@@ -8,7 +8,17 @@ Download this git repository and run `mvn package`.
 
 ## How I run it
 
-1. Start a XAP cluster. Go to the Gigaspaces install directory and run:
+1. Start a XAP cluster. Go to the Gigaspaces install directory.
+
+Set environment variables (for a developer's environment) in setenv-overrides.sh:
+
+`export GS_NIC_ADDRESS="localhost"`
+
+`export GS_MANAGER_SERVERS="localhost"`
+
+`export GS_LICENSE=<license>`
+
+Run:
 
 `./gs.sh host run-agent --manager --gsc=4`
 
