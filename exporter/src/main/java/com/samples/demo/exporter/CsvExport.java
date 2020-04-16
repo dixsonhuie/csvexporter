@@ -172,9 +172,9 @@ public class CsvExport implements java.io.Serializable {
                         sValue = CsvUtil.NULL_AS_STRING;
                     }
                     else if (converterMap.containsKey(type)) {
-                        sValue = ((IConverter) converterMap.get(type)).convert(value);
-                    } else if (converterMap.containsKey(field)) {
                         sValue = ((IConverter) converterMap.get(field)).convert(value);
+                    } else if (converterMap.containsKey(field)) {
+                        sValue = ((IConverter) converterMap.get(type)).convert(value);
                     } else {
                         sValue = value.toString();
                     }
